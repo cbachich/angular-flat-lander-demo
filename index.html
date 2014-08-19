@@ -17,11 +17,11 @@
       <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
 
       <!-- Image Gallery -->
-      <div class="gallery" ng-show="{{product.images.length > 0}}">
-        <img ng-src="{{product.images[0]}}" class="img img-circle img-thumbnail center-block"/>
+      <div class="gallery" ng-show="product.images.length" ng-controller='GalleryController as gallery'>
+        <img ng-src="{{product.images[gallery.current]}}" class="img img-circle img-thumbnail center-block"/>
         <ul class="clearfix">
-          <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
-            <img ng-src="{{image}}" />
+          <li class="small-image pull-left thumbnail" ng-repeat="image in product.images track by $index">
+            <a href ng-click="gallery.setCurrent($index)"> <img ng-src="{{image}}" /> </a>
           </li>
         </ul>
       </div>

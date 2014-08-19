@@ -38,14 +38,21 @@
       faces: 6,
       images: [
         "img/gem-06.gif",
-        "img/gem-07.gif",
-        "img/gem-10.gif"
+        "img/gem-07.gif"
       ]
     }
   ];
 
   app.controller('StoreController', function() {
     this.products = gems;
+  });
+
+  app.controller('GalleryController', function(){
+    this.current = 0;
+
+    this.setCurrent = function(newGallery){
+      this.current = newGallery || 0;
+    };
   });
 
   app.controller('PanelController', function() {
