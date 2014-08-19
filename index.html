@@ -4,9 +4,12 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   </head>
   <body>
+    <div ng-controller="StoreController as store">
+      <h1> {{store.product.name}} </h1>
+      <h2> ${{store.product.price}} </h2>
+      <p> {{store.product.description}} </p>
+    </div>
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <p>I am {{4 + 6}}</p>
-    <p>{{"hello" + " you"}}</p>
   </body>
 </html>
