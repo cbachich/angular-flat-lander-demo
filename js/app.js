@@ -19,12 +19,14 @@
         {
           stars: 5,
           body: "I love this product!",
-          author: "joe@thomas.com"
+          author: "joe@thomas.com",
+          createdOn: 1397490980837
         },
         {
           stars: 1,
           body: "This product sucks!",
-          author: "tim@hater.com"
+          author: "tim@hater.com",
+          createdOn: 1397490980837
         }
       ]
     }, {
@@ -83,6 +85,7 @@
     this.review = {};
 
     this.addReview = function(product) {
+      this.review.createdOn = Date.now();
       product.reviews.push(this.review);
       this.review = {};
     };
