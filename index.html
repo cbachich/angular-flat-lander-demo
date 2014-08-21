@@ -15,7 +15,8 @@
 
     <!-- Product Controller -->
     <div class="list-group-item" ng-repeat="product in store.products">
-      <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+      <h3 ng-include="'product-title.html'">
+      </h3>
 
       <!-- Image Gallery -->
       <div class="gallery" ng-show="product.images.length" ng-controller='GalleryController as gallery'>
