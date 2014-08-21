@@ -38,9 +38,7 @@
           <h4>Description</h4>
           <blockquote>{{product.description}}</blockquote>
         </div>
-        <div class="panel" ng-show="panel.isSelected(2)">
-          <h4>Specifications</h4>
-          <blockquote>Shine: {{product.shine}}</blockquote>
+        <div product-specs class="panel" ng-show="panel.isSelected(2)" >
         </div>
         <div class="panel" ng-show="panel.isSelected(3)">
           <h4>Reviews</h4>
