@@ -17,17 +17,8 @@
     <div class="list-group-item" ng-repeat="product in store.products">
       <product-title></product-title>
 
-      <!-- Image Gallery -->
-      <div class="gallery" ng-show="product.images.length" ng-controller='GalleryController as gallery'>
-        <img ng-src="{{product.images[gallery.current]}}" class="img img-circle img-thumbnail center-block"/>
-        <ul class="clearfix">
-          <li class="small-image pull-left thumbnail" ng-repeat="image in product.images track by $index">
-            <a href ng-click="gallery.setCurrent($index)"> <img ng-src="{{image}}" /> </a>
-          </li>
-        </ul>
-      </div>
+      <product-gallery></product-gallery>
 
-      <!-- Pane -->
       <product-panels></product-panels>
     </div>
   </body>
